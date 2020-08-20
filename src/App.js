@@ -86,7 +86,6 @@ function App() {
           }}
         />
         <div style={{ width: '100%',   height: '100%', position: 'absolute', top: 200, left: 0 }}> 
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
           <div>
             <Fade cascade>
               <Title
