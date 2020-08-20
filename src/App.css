@@ -31,8 +31,14 @@
   margin-left: 10px;
 }
 
-.custom {
-  background: linear-gradient(#ED213A , #93291E);
+.custom-bubbles {
+  background: linear-gradient(#1F1C2C , #928DAB);
+  height: 100%;
+  position: 'relative';
+}
+
+.custom-particles {
+  background: linear-gradient(#5C258D, #4389A2);
   height: 100%;
   position: 'relative';
 }

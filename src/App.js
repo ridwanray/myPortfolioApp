@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Particles from 'react-particles-js';
 import 'antd/dist/antd.css';
 import './App.css';
-import SC from "./images/soundcloud.png"; 
+import SC from "./images/soundcloud.png";
+import * as Backgrounds from './Background';
 
-import { Typography, Button, Popover, Input, Form, message } from 'antd';
+import { Typography, Button, Popover, Input, Form, message, Switch } from 'antd';
 import Fade from 'react-reveal/Fade';
 import axios from 'axios';
 
@@ -22,11 +23,16 @@ function App() {
 
   const {Title} = Typography
   const [btnPos, setbtnPos] = useState(false);
+  const [toggleBackground, setToggleBackground] = useState(false);
 
   const [form] = Form.useForm();
 
   const toggleBtnPos = () => {
     setbtnPos(!btnPos);
+  }
+
+  const handleBackgroundChange = () => {
+    setToggleBackground(!toggleBackground);
   }
 
   const onFinish = (values) => {
@@ -58,47 +64,24 @@ function App() {
 
   return (
     <div style={{ width: '100%', height: '100%', position: 'absolute', overflow: 'hidden' }}>
+        <Switch 
+          unCheckedChildren="Try Me!"
+          onClick={() => handleBackgroundChange()}
+          style ={{
+            margin: 'auto',
+            right: 30,
+            top: 30,
+            float: 'right',
+            fontWeight: 'bold',
+            color: 'white',
+            textAlign: 'center',
+          }}
+        />
         <Particles
-          className="custom"
+          className={toggleBackground ? "custom-bubbles" : "custom-particles"}
           params={{
-            particles: {
-              "color": {
-                "value": "#000000"
-              },
-              "number": {
-                "value": 160,
-                "density": {
-                    "enable": false
-                }
-              },
-              "size": {
-                  "value": 10,
-                  "random": true
-              },
-              "move": {
-                  "direction": "bottom",
-                  "out_mode": "out"
-              },
-              "line_linked": {
-                  "enable": false,
-                  "color": {
-                    "value": "#000000"
-                  }
-              }
-            },
-            "interactivity": {
-                "events": {
-                    "onclick": {
-                        "enable": true,
-                        "mode": "remove"
-                    }
-                },
-                "modes": {
-                    "remove": {
-                        "particles_nb": 10
-                    }
-                  }
-                }
+            particles: toggleBackground ?  Backgrounds.Bubbles : Backgrounds.Particles,
+            interactivity: Backgrounds.Interactivity,
           }}
         />
         <div style={{ width: '100%',   height: '100%', position: 'absolute', top: 200, left: 0 }}> 
