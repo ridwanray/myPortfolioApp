@@ -66,6 +66,7 @@ function App() {
     <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
         <Switch 
           unCheckedChildren="Try Me!"
+          checkedChildren="Try Me!"
           onClick={() => handleBackgroundChange()}
           style ={{
             margin: 'auto',
@@ -104,7 +105,7 @@ function App() {
                         'I\'m Farhan!', 
                         'I like to code and build stuff 🛠️ ',
                         'This is my personal portfolio 📜', 
-                        `It\'s still a work in progress! 👨‍💻`,
+                        `It's still a work in progress! 👨‍💻`,
                         `You can learn a little bit more about me below 🧐!`,
                       ]
                     } 
@@ -141,7 +142,7 @@ function App() {
             <Button 
               className="button" 
               onClick={()=> window.open("https://soundcloud.com/farhan-ghazi", "_blank")}
-              icon={<img style={{ position: 'relative', bottom: 2, width: 30, height: 30 }} src={SC}/>}>
+              icon={<img alt="soundcloud_logo" style={{ position: 'relative', bottom: 2, width: 30, height: 30 }} src={SC}/>}>
             </Button>
           </div>
             <div className="centered-text" >
