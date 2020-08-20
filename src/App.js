@@ -63,7 +63,7 @@ function App() {
   };
 
   return (
-    <div style={{ width: '100%', height: '100%', position: 'absolute', overflow: 'hidden' }}>
+    <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
         <Switch 
           unCheckedChildren="Try Me!"
           onClick={() => handleBackgroundChange()}

@@ -34,13 +34,17 @@
 .custom-bubbles {
   background: linear-gradient(#1A2980 , #26D0CE);
   height: 100%;
-  position: 'relative';
+  width: 100%;
+  position: fixed;
+  z-index: -100;
 }
 
 .custom-particles {
   background: linear-gradient(#5C258D, #4389A2);
   height: 100%;
-  position: 'relative';
+  width: 100%;
+  position: fixed;
+  z-index: -100;
 }
 
 .react-rotating-text-cursor {
