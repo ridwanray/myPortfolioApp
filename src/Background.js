@@ -3,7 +3,7 @@ export const Bubbles = {
       "value": "#000000"
     },
     "number": {
-      "value": 160,
+      "value": 50,
       "density": {
           "enable": false
       }
