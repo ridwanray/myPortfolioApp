@@ -275,7 +275,7 @@ function App() {
                   textAlign : "center", 
                   textDecoration: "underline",
                   fontFamily:"Book Antiqua,Georgia,Times New Roman,serif",
-                  top: btnPos ? 260 : 100
+                  top: btnPos ? 260 : 120
                 }}>
                   My Resume
               </Title>
@@ -284,7 +284,7 @@ function App() {
                 style={{ 
                   position: 'relative', 
                   color: 'white', 
-                  top: btnPos ? 270 : 110 
+                  top: btnPos ? 270 : 130 
                 }} 
                 ellipsis={{ 
                   rows: 5 
@@ -293,16 +293,6 @@ function App() {
                 showcasing one's skillset. Feel free to 
                 grab a copy of mine!
               </Paragraph>
-              <div className="centered-text" >
-              <Button
-                onClick={() => handleResumeDownload()} 
-                style={{ 
-                  top: btnPos ? 270 : 110,
-                }} 
-                type="primary"
-              >Grab Resume!
-              </Button>
-              </div>
             </div>
             <div>
               <Title
@@ -315,10 +305,21 @@ function App() {
                   textAlign : "center", 
                   textDecoration: "underline",
                   fontFamily:"Book Antiqua,Georgia,Times New Roman,serif",
-                  top: btnPos ? 290 : 140
+                  top: btnPos ? 320 : 180
                 }}>
                   Wanna get in touch?
               </Title>
+            </div>
+            <div className="centered-text" >
+              <Button
+                onClick={() => handleResumeDownload()} 
+                type="primary"
+                style={{ 
+                  position: 'relative', 
+                  top: btnPos ? 240 : 100 
+                }} 
+              >Grab Resume!
+              </Button>
             </div>
             <div>
             <Form form={form} onFinish={onFinish}>
@@ -337,7 +338,7 @@ function App() {
                 <Input 
                   style={{ 
                     margin: 'auto', 
-                    top: btnPos ? 300 : 150, 
+                    top: btnPos ? 300 : 160, 
                     width: '15%' 
                   }} 
                   placeholder="Drop your email here and I'll be notified!">
