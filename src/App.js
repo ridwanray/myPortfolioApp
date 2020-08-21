@@ -9,6 +9,7 @@ import { Typography, Button, Popover, Input, Form, message, Switch } from 'antd'
 import Fade from 'react-reveal/Fade';
 import axios from 'axios';
 
+
 import {
   GithubFilled,
   InstagramOutlined,
@@ -17,7 +18,12 @@ import {
 } from '@ant-design/icons';
 
 var ReactRotatingText = require('react-rotating-text');
+var fileDownload = require('js-file-download');
+
 const key = 'updatable';
+
+const { Paragraph } = Typography;
+
 
 function App() {
 
@@ -33,6 +39,16 @@ function App() {
 
   const handleBackgroundChange = () => {
     setToggleBackground(!toggleBackground);
+  }
+
+  const handleResumeDownload = () => {
+    axios.get('http://farhansportfolioapp.herokuapp.com/download/')
+      .then(res => {
+        fileDownload(res.data, 'Resume.pdf');
+        console.log(res);
+      }).catch(err => {
+        console.log(err);
+      })
   }
 
   const onFinish = (values) => {
@@ -51,19 +67,34 @@ function App() {
   const emailDispatchSuccess = () => {
     message.loading({ content: 'Processing...', key });
     setTimeout(() => {
-        message.success({ content: 'Awesome! I\'ll be in touch with you shortly! Thanks for expressing an interest!\nLooking forward to speaking to you', key, duration: 7 });
+        message.success({ 
+          content: 'Awesome! I\'ll be in touch with you shortly! \
+          Thanks for expressing an interest!\nLooking forward to \
+          speaking to you', 
+          key, 
+          duration: 7 
+        });
     }, 1000);
   };
 
   const emailDispatchError = () => {
     message.loading({ content: 'Processing...', key });
     setTimeout(() => {
-        message.error({ content: 'Oops! Looks like something went wrong! Please try again.', key, duration: 7 });
+        message.error({ 
+          content: 'Oops! Looks like something went wrong! Please try again.', 
+          key, 
+          duration: 7 
+        });
     }, 1000);
   };
 
   return (
-    <div style={{ width: '100%', height: '100%', position: 'absolute' }}>
+    <div 
+      style={{ 
+        width: '100%', 
+        height: '100%', 
+        position: 'absolute' 
+      }}>
         <Switch 
           unCheckedChildren="Try Me!"
           checkedChildren="Try Me!"
@@ -85,7 +116,14 @@ function App() {
             interactivity: Backgrounds.Interactivity,
           }}
         />
-        <div style={{ width: '100%',   height: '100%', position: 'absolute', top: 200, left: 0 }}> 
+        <div 
+          style={{ 
+            width: '100%',   
+            height: '100%', 
+            position: 'absolute', 
+            top: 200, 
+            left: 0 
+          }}> 
           <div>
             <Fade cascade>
               <Title
@@ -141,7 +179,14 @@ function App() {
             <Button 
               className="button" 
               onClick={()=> window.open("https://soundcloud.com/farhan-ghazi", "_blank")}
-              icon={<img alt="soundcloud_logo" style={{ position: 'relative', bottom: 2, width: 30, height: 30 }} src={SC}/>}>
+              icon={<img alt="soundcloud_logo" 
+              style={{ 
+                position: 'relative', 
+                bottom: 2, 
+                width: 30, 
+                height: 30 
+              }} 
+              src={SC}/>}>
             </Button>
           </div>
             <div className="centered-text" >
@@ -149,19 +194,26 @@ function App() {
                 content={
                   <div>
                     <p>
-                      Hey! I'm Farhan! I'm a highly-enthusiastic individual whose currently pursuing a B.Sc in Computer<br></br>
-                      Science at UNSW. I am a full-stack software developer, working primarily with the Django-React stack.<br></br>
-                      At university, I was the designated technical lead for our capstone project. I enjoy working in both<br></br>
-                      team-oriented and self-directed environments and offer great communication skills and work ethic.<br></br>
-                      My work experience includes a summer internship at Macrovue, a FinTech company formerly based<br></br>
-                      in Circular Quay (now located at Pitt Street)
+                      Hey! I'm Farhan! I'm a highly-enthusiastic individual whose currently 
+                      pursuing a B.Sc in Computer<br></br>Science at UNSW. I am a full-stack 
+                      software developer, working primarily with the Django-React stack.<br></br>
+                      At university, I was the designated technical lead for our capstone 
+                      project. I enjoy working in both<br></br>team-oriented and self-directed 
+                      environments and offer great communication skills and work ethic.<br></br>
+                      My work experience includes a summer internship at Macrovue, a 
+                      FinTech company formerly based<br></br>in Circular Quay (now located 
+                      at Pitt Street)
                     </p>
                   </div>
                 } 
                 title="About Me"
                 placement="left"
               >
-                <Button className="about-me-hobbies" type="primary">About Me</Button>
+                <Button 
+                  className="about-me-hobbies" 
+                  type="primary"
+                >About Me
+                </Button>
               </Popover>
               <Popover
                 content={
@@ -178,7 +230,11 @@ function App() {
                 title="My Hobbies"
                 placement="right"
               >
-                <Button className="about-me-hobbies" type="primary">My Hobbies</Button>
+                <Button 
+                  className="about-me-hobbies" 
+                  type="primary"
+                >My Hobbies
+                </Button>
               </Popover>
             </div>
             <div className="centered-text" >
@@ -197,7 +253,13 @@ function App() {
                 title="Technologies I Use"
                 placement="bottom"
               >
-                <Button onMouseEnter={() => toggleBtnPos()} onMouseLeave={() => toggleBtnPos()} className="tech-use" type="primary">Tech I Use</Button>
+                <Button 
+                  onMouseEnter={() => toggleBtnPos()} 
+                  onMouseLeave={() => toggleBtnPos()} 
+                  className="tech-use" 
+                  type="primary"
+                >Tech I Use
+                </Button>
               </Popover>
             </div>
             <div>
@@ -213,6 +275,46 @@ function App() {
                   fontFamily:"Book Antiqua,Georgia,Times New Roman,serif",
                   top: btnPos ? 260 : 100
                 }}>
+                  My Resume
+              </Title>
+              <Paragraph 
+                className="centered-text" 
+                style={{ 
+                  position: 'relative', 
+                  color: 'white', 
+                  top: btnPos ? 270 : 110 
+                }} 
+                ellipsis={{ 
+                  rows: 5 
+                }}>
+                A resume does a much better job at 
+                showcasing my skillset. Feel free to 
+                grab a copy of mine!
+              </Paragraph>
+              <div className="centered-text" >
+              <Button
+                onClick={() => handleResumeDownload()} 
+                style={{ 
+                  top: btnPos ? 270 : 110,
+                }} 
+                type="primary"
+              >Grab Resume!
+              </Button>
+              </div>
+            </div>
+            <div>
+              <Title
+                level={3} 
+                style={{ 
+                  margin: 'auto',
+                  position: 'relative',
+                  color: 'white', 
+                  fontSize: 25,
+                  textAlign : "center", 
+                  textDecoration: "underline",
+                  fontFamily:"Book Antiqua,Georgia,Times New Roman,serif",
+                  top: btnPos ? 290 : 140
+                }}>
                   Wanna get in touch?
               </Title>
             </div>
@@ -220,15 +322,41 @@ function App() {
             <Form form={form} onFinish={onFinish}>
               <Form.Item
                 name="email" 
-                style={{ textAlign: 'center', margin: 'auto', position: 'relative'}}
-                rules={[{ required: true, message: 'Please input a valid email!' }]}
+                style={{ 
+                  textAlign: 'center', 
+                  margin: 'auto', 
+                  position: 'relative'
+                }}
+                rules={[{ 
+                  required: true, 
+                  message: 'Please input a valid email!' 
+                }]}
               >
-                <Input style={{ margin: 'auto', top: btnPos ? 270 : 110, width: '15%' }} placeholder="Drop your email here and I'll be notified!"></Input>
+                <Input 
+                  style={{ 
+                    margin: 'auto', 
+                    top: btnPos ? 300 : 150, 
+                    width: '15%' 
+                  }} 
+                  placeholder="Drop your email here and I'll be notified!">
+                </Input>
               </Form.Item>
               <Form.Item
-                style={{ textAlign: 'center', margin: 'auto', position: 'relative'}}
+                style={{ 
+                  textAlign: 'center', 
+                  margin: 'auto', 
+                  position: 'relative'
+                }}
               >
-                <Button style={{ margin: 'auto', top: btnPos ? 275 : 135 }} type="primary" htmlType="submit">Submit</Button>
+                <Button 
+                  style={{ 
+                    margin: 'auto', 
+                    top: btnPos ? 315 : 175 
+                  }} 
+                  type="primary" 
+                  htmlType="submit"
+                >Submit
+                </Button>
               </Form.Item>
             </Form>
             </div>

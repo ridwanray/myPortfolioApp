@@ -1,12 +1,18 @@
 from rest_framework import generics, status, viewsets
 from rest_framework.response import Response
 from rest_framework.generics import ListCreateAPIView
+from rest_framework.decorators import api_view
 from .serializers import ContactSerializer
 from portfolioApp.models import Contact
 from django.shortcuts import get_object_or_404
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import action
 from django.core.mail import send_mail
+import os
+import mimetypes
+from django.core.files import File
+from django.http import HttpResponse
+from myportfolio.settings import BASE_DIR, MEDIA_ROOT
 
 class ContactsSet(viewsets.ModelViewSet):
     """
@@ -39,3 +45,14 @@ class ContactsSet(viewsets.ModelViewSet):
             status=status.HTTP_201_CREATED, 
             headers=headers
         )
+
+# Create your views here.
+@api_view(['GET'])
+def DownloadResume(self):
+    
+    path_to_file = MEDIA_ROOT + '/Resume.pdf'
+    f = open(path_to_file, 'rb')
+    pdfFile = File(f)
+    response = HttpResponse(pdfFile.read())
+    response['Content-Disposition'] = 'attachment; filename="Resume.pdf"'
+    return response 

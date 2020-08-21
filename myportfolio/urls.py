@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-from portfolioApp.views import DownloadResume
-
+from api.views import DownloadResume
 
 urlpatterns = [
     path('admin/', admin.site.urls),
