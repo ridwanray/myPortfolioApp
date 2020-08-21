@@ -42,7 +42,7 @@ function App() {
   }
 
   const handleResumeDownload = () => {
-    axios.get('http://127.0.0.1:8000/download/' , {
+    axios.get('http://farhansportfolioapp.herokuapp.com/download/' , {
       responseType: 'blob',
     })
     .then(res => {
