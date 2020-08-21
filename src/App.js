@@ -290,7 +290,7 @@ function App() {
                   rows: 5 
                 }}>
                 A resume does a much better job at 
-                showcasing my skillset. Feel free to 
+                showcasing one's skillset. Feel free to 
                 grab a copy of mine!
               </Paragraph>
               <div className="centered-text" >
