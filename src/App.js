@@ -42,13 +42,15 @@ function App() {
   }
 
   const handleResumeDownload = () => {
-    axios.get('http://farhansportfolioapp.herokuapp.com/download/')
-      .then(res => {
-        fileDownload(res.data, 'Resume.pdf');
-        console.log(res);
-      }).catch(err => {
-        console.log(err);
-      })
+    axios.get('http://127.0.0.1:8000/download/' , {
+      responseType: 'blob',
+    })
+    .then(res => {
+      fileDownload(res.data, 'Resume.pdf');
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   const onFinish = (values) => {
