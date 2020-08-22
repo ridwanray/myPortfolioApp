@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Particles from 'react-particles-js';
-import 'antd/dist/antd.css';
+//import 'antd/dist/antd.css';
 import './App.css';
 import SC from "./images/soundcloud.png";
 import * as Backgrounds from './Background';
@@ -135,7 +135,7 @@ function App() {
                   color: 'white', 
                   fontSize: 50, 
                   textAlign : "center", 
-                  fontFamily:"Book Antiqua,Georgia,Times New Roman,serif" 
+                  fontFamily: "Helvetica Neue" 
                 }}>
                   <ReactRotatingText 
                     items={
@@ -339,7 +339,8 @@ function App() {
                   style={{ 
                     margin: 'auto', 
                     top: btnPos ? 300 : 160, 
-                    width: '15%' 
+                    width: '20%',
+                    textAlign: 'center'
                   }} 
                   placeholder="Drop your email here and I'll be notified!">
                 </Input>
