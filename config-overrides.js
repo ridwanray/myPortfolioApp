@@ -11,7 +11,7 @@ module.exports = override(
       javascriptEnabled: true,
       modifyVars: {
         '@font-family': 'Do Hyeon',
-        '@font-size-base': '20px'
+        '@font-size-base': '18px'
       },
     },
   }),
