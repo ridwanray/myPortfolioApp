@@ -109,6 +109,7 @@ function App() {
             fontWeight: 'bold',
             color: 'white',
             textAlign: 'center',
+            width: 70,
           }}
         />
         <Particles
@@ -135,7 +136,7 @@ function App() {
                   color: 'white', 
                   fontSize: 50, 
                   textAlign : "center", 
-                  fontFamily: "Helvetica Neue" 
+                  fontFamily: `Do Hyeon', sans-serif` 
                 }}>
                   <ReactRotatingText 
                     items={
@@ -146,6 +147,7 @@ function App() {
                         'This is my personal portfolio 📜', 
                         `It's still a work in progress! 👨‍💻`,
                         `You can learn a little bit more about me below 🧐!`,
+                        'Also, feel free to grab a copy of my resume from below!'
                       ]
                     } 
                   />
@@ -274,8 +276,8 @@ function App() {
                   fontSize: 25,
                   textAlign : "center", 
                   textDecoration: "underline",
-                  fontFamily:"Book Antiqua,Georgia,Times New Roman,serif",
-                  top: btnPos ? 260 : 120
+                  fontFamily:`Do Hyeon', sans-serif` ,
+                  top: btnPos ? 300 : 120
                 }}>
                   My Resume
               </Title>
@@ -284,14 +286,14 @@ function App() {
                 style={{ 
                   position: 'relative', 
                   color: 'white', 
-                  top: btnPos ? 270 : 130 
+                  top: btnPos ? 300 : 120
                 }} 
                 ellipsis={{ 
                   rows: 5 
                 }}>
                 A resume does a much better job at 
-                showcasing one's skillset. Feel free to 
-                grab a copy of mine!
+                showcasing one's skillset. 
+                Click below to grab mine!
               </Paragraph>
             </div>
             <div>
@@ -304,8 +306,8 @@ function App() {
                   fontSize: 25,
                   textAlign : "center", 
                   textDecoration: "underline",
-                  fontFamily:"Book Antiqua,Georgia,Times New Roman,serif",
-                  top: btnPos ? 320 : 180
+                  fontFamily: `Do Hyeon', sans-serif` ,
+                  top: btnPos ? 360 : 180
                 }}>
                   Wanna get in touch?
               </Title>
@@ -316,7 +318,7 @@ function App() {
                 type="primary"
                 style={{ 
                   position: 'relative', 
-                  top: btnPos ? 240 : 100 
+                  top: btnPos ? 260 : 80
                 }} 
               >Grab Resume!
               </Button>
@@ -338,7 +340,7 @@ function App() {
                 <Input 
                   style={{ 
                     margin: 'auto', 
-                    top: btnPos ? 300 : 160, 
+                    top: btnPos ? 340 : 160, 
                     width: '20%',
                     textAlign: 'center'
                   }} 
@@ -355,7 +357,7 @@ function App() {
                 <Button 
                   style={{ 
                     margin: 'auto', 
-                    top: btnPos ? 315 : 175 
+                    top: btnPos ? 360 : 175 
                   }} 
                   type="primary" 
                   htmlType="submit"
