@@ -10,8 +10,8 @@ module.exports = override(
     lessOptions: {
       javascriptEnabled: true,
       modifyVars: {
-        '@font-family': 'Do Hyeon',
-        '@font-size-base': '18px'
+        '@font-family': `'Teko', sans-serif`,
+        '@font-size-base': '20px'
       },
     },
   }),
