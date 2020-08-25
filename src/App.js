@@ -15,6 +15,7 @@ import {
   InstagramOutlined,
   LinkedinFilled,
   FacebookFilled,
+  MediumOutlined,
 } from '@ant-design/icons';
 
 var ReactRotatingText = require('react-rotating-text');
@@ -142,7 +143,7 @@ function App() {
                     items={
                       [
                         'Hey there! 😊',
-                        'I\'m Farhan!', 
+                        'I\'m Farhan! ', 
                         'I like to code and build stuff 🛠️ ',
                         'This is my personal portfolio 📜', 
                         `It's still a work in progress! 👨‍💻`,
@@ -174,6 +175,16 @@ function App() {
               className="button"  
               onClick={()=> window.open("https://www.linkedin.com/in/farhan-ghazi-901b69177/", "_blank")}
               icon={<LinkedinFilled/>}>
+            </Button>
+            <Button
+              className="button"  
+              onClick={()=> window.open("https://medium.com/@farhanghazi17", "_blank")}
+              icon={<MediumOutlined/>}>
+            </Button>
+            <Button 
+              className="button" 
+              onClick={()=> window.open("https://www.facebook.com/farhanghazi97", "_blank")}
+              icon={<FacebookFilled/>}>
             </Button>
             <Button 
               className="button" 
@@ -295,6 +306,17 @@ function App() {
                 showcasing one's skillset. 
                 Click below to grab mine!
               </Paragraph>
+              <div className="centered-text" >
+              <Button
+                onClick={() => handleResumeDownload()} 
+                type="primary"
+                style={{ 
+                  position: 'relative', 
+                  top: btnPos ? 290 : 110
+                }} 
+              >Grab Resume!
+              </Button>
+            </div>
             </div>
             <div>
               <Title
@@ -307,65 +329,55 @@ function App() {
                   textAlign : "center", 
                   textDecoration: "underline",
                   fontFamily: `Do Hyeon', sans-serif` ,
-                  top: btnPos ? 360 : 180
+                  top: btnPos ? 330 : 150
                 }}>
                   Wanna get in touch?
               </Title>
-            </div>
-            <div className="centered-text" >
-              <Button
-                onClick={() => handleResumeDownload()} 
-                type="primary"
-                style={{ 
-                  position: 'relative', 
-                  top: btnPos ? 260 : 80
-                }} 
-              >Grab Resume!
-              </Button>
-            </div>
-            <div>
-            <Form form={form} onFinish={onFinish}>
-              <Form.Item
-                name="email" 
-                style={{ 
-                  textAlign: 'center', 
-                  margin: 'auto', 
-                  position: 'relative'
-                }}
-                rules={[{ 
-                  required: true, 
-                  message: 'Please input a valid email!' 
-                }]}
-              >
-                <Input 
+              <div>
+              <Form form={form} onFinish={onFinish}>
+                <Form.Item
+                  name="email" 
                   style={{ 
+                    textAlign: 'center', 
                     margin: 'auto', 
+                    position: 'relative',
                     top: btnPos ? 340 : 160, 
-                    width: '20%',
-                    textAlign: 'center'
-                  }} 
-                  placeholder="Drop your email here and I'll be notified!">
-                </Input>
-              </Form.Item>
-              <Form.Item
-                style={{ 
-                  textAlign: 'center', 
-                  margin: 'auto', 
-                  position: 'relative'
-                }}
-              >
-                <Button 
+                  }}
+                  rules={[{ 
+                    required: true, 
+                    message: 'Please input a valid email!' 
+                  }]}
+                >
+                  <Input 
+                    style={{ 
+                      margin: 'auto', 
+                      
+                      width: '20%',
+                      textAlign: 'center'
+                    }} 
+                    placeholder="Drop your email here and I'll be notified!">
+                  </Input>
+                </Form.Item>
+                <Form.Item
                   style={{ 
+                    textAlign: 'center', 
                     margin: 'auto', 
-                    top: btnPos ? 360 : 175 
-                  }} 
-                  type="primary" 
-                  htmlType="submit"
-                >Submit
-                </Button>
-              </Form.Item>
-            </Form>
-            </div>
+                    position: 'relative'
+                  }}
+                >
+                  <Button 
+                    style={{ 
+                      margin: 'auto', 
+                      top: btnPos ? 360 : 175 
+                    }} 
+                    type="primary" 
+                    htmlType="submit"
+                  >Submit
+                  </Button>
+                </Form.Item>
+              </Form>
+              </div>
+              </div>
           </div>
     </div>
   );
