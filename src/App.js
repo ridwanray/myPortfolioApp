@@ -188,11 +188,6 @@ function App() {
             </Button>
             <Button 
               className="button" 
-              onClick={()=> window.open("https://www.facebook.com/farhanghazi97", "_blank")}
-              icon={<FacebookFilled/>}>
-            </Button>
-            <Button 
-              className="button" 
               onClick={()=> window.open("https://soundcloud.com/farhan-ghazi", "_blank")}
               icon={<img alt="soundcloud_logo" 
               style={{ 
