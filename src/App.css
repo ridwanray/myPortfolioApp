@@ -5,11 +5,31 @@
   position: 'relative';
 }
 
+.centered-button {
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  top: 110px;
+  border-width: 1px;
+  border-color: black;
+  z-index: 1;
+}
+
+.centered-button-drop {
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  top: 290px;
+  border-width: 1px;
+  border-color:black;
+  z-index: 1;
+}
+
 .about-me-hobbies {
   color: #ffffff;
   text-align: center;
   margin: auto;
-  position: 'relative';
+  position: relative;
   top: 20px;
   float: 'left';
   margin-left: 10px;

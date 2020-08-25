@@ -290,32 +290,29 @@ function App() {
                 }}>
                   My Resume
               </Title>
-              <Paragraph 
-                className="centered-text" 
-                style={{ 
-                  position: 'relative', 
-                  color: 'white', 
-                  top: btnPos ? 300 : 120
-                }} 
-                ellipsis={{ 
-                  rows: 5 
-                }}>
-                A resume does a much better job at 
-                showcasing one's skillset. 
-                Click below to grab mine!
-              </Paragraph>
-              <div className="centered-text" >
+              <div className="centered-text">
+                <Paragraph 
+                 style={{ 
+                   position: 'relative', 
+                   color: 'white', 
+                   top: btnPos ? 300 : 120
+                 }} 
+                 ellipsis={{ 
+                   rows: 5 
+                 }}>
+                 A resume does a much better job at 
+                 showcasing one's skillset. 
+                 Click below to grab mine!
+               </Paragraph>
+              </div>
+              <div className={btnPos ? "centered-button-drop" : "centered-button"}>
               <Button
+                style={{ border: '1px solid black' }}
                 onClick={() => handleResumeDownload()} 
                 type="primary"
-                style={{ 
-                  position: 'relative',
-                  border: '1px solid black', 
-                  top: btnPos ? 290 : 110
-                }} 
               >Grab Resume!
               </Button>
-            </div>
+              </div>
             </div>
             <div>
               <Title
