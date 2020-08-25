@@ -222,6 +222,7 @@ function App() {
                 <Button 
                   className="about-me-hobbies" 
                   type="primary"
+                  style={{ border: '1px solid black' }}
                 >About Me
                 </Button>
               </Popover>
@@ -243,6 +244,7 @@ function App() {
                 <Button 
                   className="about-me-hobbies" 
                   type="primary"
+                  style={{ border: '1px solid black' }}
                 >My Hobbies
                 </Button>
               </Popover>
@@ -268,6 +270,7 @@ function App() {
                   onMouseLeave={() => toggleBtnPos()} 
                   className="tech-use" 
                   type="primary"
+                  style={{ border: '1px solid black' }}
                 >Tech I Use
                 </Button>
               </Popover>
@@ -306,7 +309,8 @@ function App() {
                 onClick={() => handleResumeDownload()} 
                 type="primary"
                 style={{ 
-                  position: 'relative', 
+                  position: 'relative',
+                  border: '1px solid black', 
                   top: btnPos ? 290 : 110
                 }} 
               >Grab Resume!
@@ -346,7 +350,7 @@ function App() {
                   <Input 
                     style={{ 
                       margin: 'auto', 
-                      
+                      border: '1px solid black',
                       width: '20%',
                       textAlign: 'center'
                     }} 
@@ -362,7 +366,8 @@ function App() {
                 >
                   <Button 
                     style={{ 
-                      margin: 'auto', 
+                      marginBottom: '20px',
+                      border: '1px solid black',
                       top: btnPos ? 360 : 175 
                     }} 
                     type="primary" 
