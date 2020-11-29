@@ -82,6 +82,9 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -109,7 +112,8 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = "Nv3ny6nf"
 EMAIL_CONFIRMATION_PERIOD_DAYS = 1
-SIMPLE_EMAIL_CONFIRMATION_PERIOD = timedelta(days=EMAIL_CONFIRMATION_PERIOD_DAYS)
+SIMPLE_EMAIL_CONFIRMATION_PERIOD = timedelta(
+    days=EMAIL_CONFIRMATION_PERIOD_DAYS)
 
 ### ---------- DISPATCH VERIFICATION EMAIL SETTINGS END ---------- ###
 
