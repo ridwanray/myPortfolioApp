@@ -453,8 +453,11 @@ function App() {
                   style={{
                     margin: "auto",
                     border: "1px solid black",
-                    width: "20%",
+                    width: "60%",
                     textAlign: "center",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                   placeholder="Drop your email here and I'll be notified!"
                 ></Input>
