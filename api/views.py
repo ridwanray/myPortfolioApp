@@ -14,6 +14,7 @@ from django.core.files import File
 from django.http import HttpResponse
 from myportfolio.settings import BASE_DIR, MEDIA_ROOT
 
+
 class ContactsSet(viewsets.ModelViewSet):
     """
     A viewset for viewing and editing contact instances.
@@ -41,18 +42,20 @@ class ContactsSet(viewsets.ModelViewSet):
         )
 
         return Response(
-            serializer.data, 
-            status=status.HTTP_201_CREATED, 
+            serializer.data,
+            status=status.HTTP_201_CREATED,
             headers=headers
         )
 
 # Create your views here.
+
+
 @api_view(['GET'])
 def DownloadResume(self):
-    
+
     path_to_file = MEDIA_ROOT + '/Resume.pdf'
     f = open(path_to_file, 'rb')
     pdfFile = File(f)
     response = HttpResponse(pdfFile.read())
     response['Content-Disposition'] = 'attachment; filename="Resume.pdf"'
-    return response 
+    return response

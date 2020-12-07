@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolioApp',
     'rest_framework',
+    'django_extensions',
     'corsheaders',
 ]
 
@@ -110,10 +111,8 @@ EMAIL_HOST_USER = "readrecommend@gmail.com"
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = "Nv3ny6nf"
-EMAIL_CONFIRMATION_PERIOD_DAYS = 1
-SIMPLE_EMAIL_CONFIRMATION_PERIOD = timedelta(
-    days=EMAIL_CONFIRMATION_PERIOD_DAYS)
+EMAIL_HOST_PASSWORD = "tyxsmhbtngnxptcz"
+DEFAULT_FROM_EMAIL = "readrecommend@gmail.com"
 
 ### ---------- DISPATCH VERIFICATION EMAIL SETTINGS END ---------- ###
 
