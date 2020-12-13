@@ -20,9 +20,11 @@ export default function GitHubRepos() {
   const [PLogo, setPLogo] = useState(CLogo);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/github/").then((res) => {
-      setRepos(JSON.parse(res.data));
-    });
+    axios
+      .get("https://farhansportfolioapp.herokuapp.com/github/")
+      .then((res) => {
+        setRepos(JSON.parse(res.data));
+      });
   }, []);
 
   const getLogo = (index) => {
