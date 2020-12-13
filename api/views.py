@@ -13,6 +13,8 @@ import mimetypes
 from django.core.files import File
 from django.http import HttpResponse
 from myportfolio.settings import BASE_DIR, MEDIA_ROOT
+import requests
+import json
 
 
 class ContactsSet(viewsets.ModelViewSet):
@@ -59,3 +61,22 @@ def DownloadResume(self):
     response = HttpResponse(pdfFile.read())
     response['Content-Disposition'] = 'attachment; filename="Resume.pdf"'
     return response
+
+
+@api_view(['GET'])
+def GetGitHubRepos(self):
+    x = requests.get('https://api.github.com/users/farhanghazi97/repos')
+    repos = x.json()
+    resp = []
+    for repo in repos:
+        resp.append({
+            'repo_name': repo['name'],
+            'repo_url': repo['html_url'],
+            'repo_desc': repo['description'],
+            'repo_lang': repo['language']
+        })
+    return Response(
+        json.dumps(resp),
+        status=status.HTTP_200_OK,
+        content_type="application/json"
+    )

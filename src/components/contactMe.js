@@ -54,16 +54,7 @@ export default function ContactMe() {
 
   return (
     <div style={{ paddingTop: 20 }}>
-      <Title
-        level={3}
-        style={{
-          color: "white",
-          fontSize: 25,
-          textAlign: "center",
-          textDecoration: "underline",
-          fontFamily: `Do Hyeon', sans-serif`,
-        }}
-      >
+      <Title level={3} className="component-header" style={{ color: "white" }}>
         Wanna get in touch?
       </Title>
       <Form form={form} onFinish={onFinish}>

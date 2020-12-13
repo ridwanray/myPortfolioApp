@@ -5,7 +5,7 @@ import { Button, Popover } from "antd";
 
 export default function MyHobbies() {
   return (
-    <div style={{ marginRight: 10 }}>
+    <div className="flex-item">
       <Popover
         content={
           <div>

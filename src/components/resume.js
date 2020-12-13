@@ -25,21 +25,15 @@ export default function Resume() {
   };
 
   return (
-    <div style={{ paddingTop: 20 }}>
-      <Title
-        level={3}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          color: "white",
-          fontSize: 25,
-          textDecoration: "underline",
-          fontFamily: `Do Hyeon', sans-serif`,
-        }}
-      >
-        My Resume
-      </Title>
+    <div className="space-between-components">
       <div className="centered-text">
+        <Title
+          level={3}
+          className="component-header"
+          style={{ color: "white" }}
+        >
+          My Resume
+        </Title>
         <Paragraph
           style={{
             color: "white",
@@ -51,8 +45,6 @@ export default function Resume() {
           A resume does a much better job at showcasing one's skillset. Click
           below to grab mine!
         </Paragraph>
-      </div>
-      <div className="centered-text">
         <Button
           style={{ border: "1px solid black" }}
           onClick={() => handleResumeDownload()}

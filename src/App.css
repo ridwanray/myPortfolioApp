@@ -1,3 +1,15 @@
+@font-face {
+  font-family: DoHyeon;
+  src: url("./fonts/DoHyeon-Regular.ttf");
+}
+
+.custom-center {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+}
+
 .app-div {
   width: 100%;
   height: 100%;
@@ -15,7 +27,7 @@
   color: white;
   font-size: 50px;
   text-align: center;
-  font-family: Do Hyeon;
+  font-family: DoHyeon;
 }
 
 .rightSwitch {
@@ -61,11 +73,36 @@
   margin: 20px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-center {
   justify-content: center;
   flex-direction: row;
+}
+
+.flex-col {
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.flex-item {
+  margin-right: 10px;
+}
+
+.space-between-components {
+  padding-top: 20px;
+}
+
+.component-header {
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .button {

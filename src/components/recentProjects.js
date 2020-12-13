@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../images/OP_Logo_White.png";
 import "../App.css";
 
@@ -8,18 +8,11 @@ export default function RecentProjects() {
   const { Title } = Typography;
   return (
     <>
-      <div style={{ paddingTop: 20 }}>
+      <div className="space-between-components">
         <Title
           level={3}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            color: "white",
-            fontSize: 25,
-            textAlign: "center",
-            textDecoration: "underline",
-            fontFamily: `Do Hyeon', sans-serif`,
-          }}
+          className="component-header"
+          style={{ color: "white" }}
         >
           Recent Projects
         </Title>
