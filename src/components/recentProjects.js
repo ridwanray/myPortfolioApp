@@ -8,7 +8,7 @@ export default function RecentProjects() {
   const { Title } = Typography;
   return (
     <>
-      <div className="space-between-components">
+      <div className="space-between-components custom-center">
         <Title
           level={3}
           className="component-header"
@@ -16,14 +16,7 @@ export default function RecentProjects() {
         >
           Recent Projects
         </Title>
-        <div
-          className="centered-text"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div className="centered-text">
           <Card
             title="OrdinaryPlaylists"
             extra={
