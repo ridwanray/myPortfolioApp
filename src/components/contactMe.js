@@ -75,10 +75,11 @@ export default function ContactMe() {
             placeholder="Drop your email here!"
           ></Input>
         </Form.Item>
-        <Form.Item>
+        <Form.Item className="centered-text">
           <Button
             style={{
               border: "1px solid black",
+              textAlign: "center",
             }}
             type="primary"
             htmlType="submit"

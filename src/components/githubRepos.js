@@ -74,7 +74,8 @@ export default function GitHubRepos() {
                     width: 400,
                     borderRadius: 10,
                     color: "white",
-                    background: "linear-gradient(to right, #1f1c2c, #928dab)",
+                    background:
+                      "linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)",
                   }}
                   title={repo.repo_name}
                   headStyle={{

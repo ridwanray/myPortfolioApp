@@ -30,9 +30,13 @@ function App() {
         </div>
         <div className="flex-container flex-center">
           <RecentProjects />
+        </div>
+        <div className="flex-container flex-center">
           <GitHubRepos />
         </div>
-        <Resume />
+        <div className="flex-container flex-center">
+          <Resume />
+        </div>
         <div className="flex-container flex-center">
           <ContactMe />
         </div>
