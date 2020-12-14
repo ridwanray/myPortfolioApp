@@ -8,9 +8,11 @@ export default function LeetCodeProgress() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/leetcode/").then((res) => {
-      setData(JSON.parse(res.data));
-    });
+    axios
+      .get("https://farhansportfolioapp.herokuapp.com/leetcode/")
+      .then((res) => {
+        setData(JSON.parse(res.data));
+      });
   }, []);
 
   return (
