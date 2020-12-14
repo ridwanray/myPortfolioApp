@@ -11,6 +11,7 @@ import RecentProjects from "./components/recentProjects";
 import Resume from "./components/resume";
 import ContactMe from "./components/contactMe";
 import GitHubRepos from "./components/githubRepos";
+import LeetCodeProgress from "./components/leetcodeProgress";
 
 function App() {
   return (
@@ -24,11 +25,14 @@ function App() {
           <MyHobbies />
           <TechIUse />
         </div>
-        <RecentProjects />
-        <Resume />
-        <div>
+        <div className="flex-container flex-center">
+          <LeetCodeProgress />
+        </div>
+        <div className="flex-container flex-center">
+          <RecentProjects />
           <GitHubRepos />
         </div>
+        <Resume />
         <div className="flex-container flex-center">
           <ContactMe />
         </div>

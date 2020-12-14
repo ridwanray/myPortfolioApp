@@ -8,13 +8,13 @@ export default function RecentProjects() {
   const { Title } = Typography;
   return (
     <>
-      <div className="space-between-components custom-center">
+      <div className="space-between-components">
         <Title
           level={3}
           className="component-header"
           style={{ color: "white" }}
         >
-          Recent Projects
+          Freelance Projects
         </Title>
         <div className="centered-text">
           <Card

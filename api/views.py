@@ -15,6 +15,7 @@ from django.http import HttpResponse
 from myportfolio.settings import BASE_DIR, MEDIA_ROOT
 import requests
 import json
+from appsecrets import LEETCODE_COOKIE, LEETCODE_CSRFTOKEN
 
 
 class ContactsSet(viewsets.ModelViewSet):
@@ -77,6 +78,40 @@ def GetGitHubRepos(self):
         })
     return Response(
         json.dumps(resp),
+        status=status.HTTP_200_OK,
+        content_type="application/json"
+    )
+
+
+@api_view(['GET'])
+def GetLeetCodeData(self):
+    headers = {
+        "Cookie": LEETCODE_COOKIE,
+        "x-csrftoken": LEETCODE_CSRFTOKEN
+    }
+    x = requests.get(
+        'https://leetcode.com/api/problems/algorithms/', headers=headers).json()
+    problem_data = {}
+    problem_data['total_questions'] = x['num_total']
+    problem_data['total_solved'] = x['num_solved']
+    problem_data['easy_solved'] = x['ac_easy']
+    problem_data['medium_solved'] = x['ac_medium']
+    problem_data['hard_solved'] = x['ac_hard']
+    total_easy = 0
+    total_medium = 0
+    total_hard = 0
+    for problem in x['stat_status_pairs']:
+        if problem['difficulty']['level'] == 1:
+            total_easy += 1
+        elif problem['difficulty']['level'] == 2:
+            total_medium += 1
+        elif problem['difficulty']['level'] == 3:
+            total_hard += 1
+    problem_data['total_easy'] = total_easy
+    problem_data['total_medium'] = total_medium
+    problem_data['total_hard'] = total_hard
+    return Response(
+        json.dumps(problem_data),
         status=status.HTTP_200_OK,
         content_type="application/json"
     )
