@@ -19,13 +19,18 @@ export default function LeetCodeProgress() {
   return (
     <div>
       <div style={{ marginTop: 20 }}>
-        <img width="64" height="64" src={LeetcodeLogo}></img>
+        <img
+          width="64"
+          height="64"
+          src={LeetcodeLogo}
+          style={{ float: "left", position: "relative", bottom: 8 }}
+        ></img>
         <Title
           level={3}
           className="component-header"
-          style={{ color: "white", float: "right", marginTop: 7 }}
+          style={{ color: "white", marginTop: 5 }}
         >
-          Leetcode Progress Tracker
+          Leetcode Tracker
         </Title>
       </div>
       <div className="centered-text">

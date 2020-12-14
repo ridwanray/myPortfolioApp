@@ -31,14 +31,11 @@
 }
 
 .rightSwitch {
-  margin: auto;
-  right: 30px;
   top: 30px;
   float: right;
   font-weight: bold;
   color: white;
   text-align: center;
-  width: 70;
 }
 
 .centered-text {
