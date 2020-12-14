@@ -14,10 +14,11 @@ export default function TechIUse() {
         content={
           <div>
             <p>
+              Favourite Editor: VSCode<br></br>
               Languages: C, Python, JS, Java<br></br>
               Backend: Django, NodeJS<br></br>
               Frontend: React, Vue, Angular<br></br>
-              Data: PostgreSQL, MySQL<br></br>
+              RDBMS: PostgreSQL, MySQL<br></br>
               <b>and learning a ton more...</b>
             </p>
           </div>

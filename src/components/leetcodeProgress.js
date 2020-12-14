@@ -26,11 +26,16 @@ export default function LeetCodeProgress() {
             color: "white",
             marginRight: 10,
           }}
+          width={80}
           strokeColor="green"
           className="flex-item"
           type="circle"
           percent={(data.easy_solved / data.total_easy).toFixed(2)}
-          format={() => `${data.easy_solved} Easy`}
+          format={() => (
+            <p style={{ marginTop: 20, color: "white" }}>
+              {data.easy_solved} Easy
+            </p>
+          )}
         />
       ) : null}
       {data ? (
@@ -39,11 +44,16 @@ export default function LeetCodeProgress() {
             color: "white",
             marginRight: 10,
           }}
+          width={80}
           strokeColor="orange"
           className="flex-item"
           type="circle"
           percent={(data.medium_solved / data.total_medium).toFixed(2)}
-          format={() => `${data.medium_solved} Medium`}
+          format={() => (
+            <p style={{ marginTop: 20, color: "white" }}>
+              {data.medium_solved} Medium
+            </p>
+          )}
         />
       ) : null}
       {data ? (
@@ -51,11 +61,16 @@ export default function LeetCodeProgress() {
           style={{
             color: "white",
           }}
+          width={80}
           strokeColor="red"
           className="flex-item"
           type="circle"
           percent={(data.hard_solved / data.total_hard).toFixed(2)}
-          format={() => `${data.hard_solved} Hard`}
+          format={() => (
+            <p style={{ marginTop: 20, color: "white" }}>
+              {data.hard_solved} Hard
+            </p>
+          )}
         />
       ) : null}
     </div>
