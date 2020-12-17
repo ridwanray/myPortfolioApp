@@ -13,7 +13,7 @@ export default function ContactMe() {
 
   const onFinish = (values) => {
     axios
-      .post("http://farhansportfolioapp.herokuapp.com/api/contacts/", {
+      .post("https://farhansportfolioapp.herokuapp.com/api/contacts/", {
         email: values.email,
       })
       .then((res) => {
@@ -32,9 +32,7 @@ export default function ContactMe() {
     setTimeout(() => {
       message.success({
         content:
-          "Awesome! I'll be in touch with you shortly! \
-          Thanks for expressing an interest!\nLooking forward to \
-          speaking to you",
+          "Awesome! I'll be in touch with you shortly! Thanks for expressing an interest!\nLooking forward to speaking to you",
         key,
         duration: 7,
       });

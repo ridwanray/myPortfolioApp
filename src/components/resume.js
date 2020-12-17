@@ -12,7 +12,7 @@ export default function Resume() {
 
   const handleResumeDownload = () => {
     axios
-      .get("http://farhansportfolioapp.herokuapp.com/download/", {
+      .get("https://farhansportfolioapp.herokuapp.com/download/", {
         responseType: "blob",
       })
       .then((res) => {

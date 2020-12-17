@@ -20,6 +20,7 @@ export default function LeetCodeProgress() {
     <div>
       <div style={{ marginTop: 20 }}>
         <img
+          alt="icon"
           width="64"
           height="64"
           src={LeetcodeLogo}
