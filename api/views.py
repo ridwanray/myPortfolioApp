@@ -15,7 +15,8 @@ from django.http import HttpResponse
 from myportfolio.settings import BASE_DIR, MEDIA_ROOT
 import requests
 import json
-from appsecrets import LEETCODE_COOKIE, LEETCODE_CSRFTOKEN
+from urllib.request import urlopen
+from appsecrets import LEETCODE_COOKIE, LEETCODE_CSRFTOKEN, MEDIUM_INTEGRATION_TOKEN
 
 
 class ContactsSet(viewsets.ModelViewSet):
@@ -115,3 +116,19 @@ def GetLeetCodeData(self):
         status=status.HTTP_200_OK,
         content_type="application/json"
     )
+
+
+@api_view(['GET'])
+def GetMediumData(self):
+    url = "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@farhanghazi17"
+    response = urlopen(url)
+    data = json.loads(response.read())
+    cleaned_data = []
+    for item in data['items']:
+        if item['categories']:
+            cleaned_data.append({
+                'title': item['title'],
+                'link': item['link'],
+                'categories': item['categories']
+            })
+    return Response(json.dumps(cleaned_data), status=status.HTTP_200_OK)

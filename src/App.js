@@ -12,6 +12,7 @@ import Resume from "./components/resume";
 import ContactMe from "./components/contactMe";
 import GitHubRepos from "./components/githubRepos";
 import LeetCodeProgress from "./components/leetcodeProgress";
+import MyBlog from "./components/myBlog";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         </div>
         <div className="flex-container flex-center">
           <RecentProjects />
+        </div>
+        <div className="flex-container flex-center">
+          <MyBlog />
         </div>
         <div className="flex-container flex-center">
           <GitHubRepos />
