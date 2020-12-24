@@ -19,9 +19,11 @@ function App() {
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/gituser/").then((res) => {
-      setUserData(res.data);
-    });
+    axios
+      .get("https://farhansportfolioapp.herokuapp.com/gituser/")
+      .then((res) => {
+        setUserData(res.data);
+      });
   }, []);
 
   return (
