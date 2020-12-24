@@ -38,6 +38,8 @@ function App() {
               style={{
                 borderRadius: "50%",
                 marginBottom: 20,
+                width: 300,
+                height: 300,
               }}
             ></img>
           ) : null}
