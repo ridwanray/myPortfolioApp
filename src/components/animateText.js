@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
+import axios from "axios";
 
 import { Typography } from "antd";
 
@@ -7,7 +8,7 @@ import Fade from "react-reveal/Fade";
 
 var ReactRotatingText = require("react-rotating-text");
 
-export default function AnimateText() {
+export default function AnimateText(props) {
   const { Title } = Typography;
   return (
     <div>
@@ -22,17 +23,20 @@ export default function AnimateText() {
             fontFamily: `Do Hyeon', sans-serif`,
           }}
         >
-          <ReactRotatingText
-            items={[
-              "Hey there! 😊",
-              "I'm Farhan! ",
-              "I like to code and build stuff 🛠️ ",
-              "This is my personal portfolio 📜",
-              `It's still a work in progress! 👨‍💻`,
-              `You can learn a little bit more about me below 🧐!`,
-              "Also, feel free to grab a copy of my resume from below!",
-            ]}
-          />
+          {props.userData ? (
+            <ReactRotatingText
+              items={[
+                "Hey there! 😊",
+                "I'm Farhan! ",
+                "I love writing code to solve problems! 🛠️ ",
+                `I'm currently based in ${props.userData.location} 🇦🇺`,
+                "This is my personal portfolio 📜",
+                `It's still a work in progress! 👨‍💻`,
+                `You can learn a little bit more about me below 🧐!`,
+                "Also, feel free to grab a copy of my resume!",
+              ]}
+            />
+          ) : null}
         </Title>
       </Fade>
     </div>

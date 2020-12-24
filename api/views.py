@@ -132,3 +132,18 @@ def GetMediumData(self):
                 'categories': item['categories']
             })
     return Response(json.dumps(cleaned_data), status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def GetGitHubUserData(self):
+    url = "https://api.github.com/users/farhanghazi97"
+    x = requests.get(url).json()
+    userData = {}
+    userData['profile_pic'] = x['avatar_url']
+    userData['location'] = x['location']
+    userData['description'] = x['bio']
+    return Response(
+        userData,
+        status=status.HTTP_200_OK,
+        content_type="application/json"
+    )

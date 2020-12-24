@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./App.css";
 
 import Background from "./components/background";
@@ -15,11 +16,33 @@ import LeetCodeProgress from "./components/leetcodeProgress";
 import MyBlog from "./components/myBlog";
 
 function App() {
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/gituser/").then((res) => {
+      setUserData(res.data);
+    });
+  }, []);
+
   return (
     <div>
       <Background />
       <div className="app-div">
-        <AnimateText />
+        <div className="flex-container flex-center">
+          {userData ? (
+            <img
+              alt="gitprofilpicture"
+              src={userData.profile_pic}
+              style={{
+                borderRadius: "50%",
+                marginBottom: 20,
+              }}
+            ></img>
+          ) : null}
+        </div>
+        <div className="flex-container flex-center">
+          <AnimateText userData={userData} />
+        </div>
         <SocialLinks />
         <div className="flex-container flex-center">
           <AboutMe />
