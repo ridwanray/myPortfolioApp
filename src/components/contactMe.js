@@ -51,11 +51,11 @@ export default function ContactMe() {
   };
 
   return (
-    <div style={{ paddingTop: 20 }}>
+    <div>
       <Title level={3} className="component-header" style={{ color: "white" }}>
         Wanna get in touch?
       </Title>
-      <Form form={form} onFinish={onFinish}>
+      <Form className="flex-center" form={form} onFinish={onFinish}>
         <Form.Item
           name="email"
           rules={[

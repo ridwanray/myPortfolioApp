@@ -102,6 +102,7 @@ export default function GitHubRepos() {
                         width="64"
                         height="64"
                         src={PLogo}
+                        alt="logo"
                       ></img>
                     ) : null}
                   </div>
