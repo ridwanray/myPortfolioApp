@@ -16,6 +16,7 @@ export default function TechIUse() {
             <p>
               Favourite Editor: VSCode<br></br>
               Languages: C, Python, JS, Java, PHP<br></br>
+              Dev Ops: AWS, Heroku<br></br>
               Backend: Django, NodeJS<br></br>
               Frontend: React, Vue, Angular<br></br>
               RDBMS: PostgreSQL, MySQL<br></br>
