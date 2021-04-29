@@ -1,8 +1,9 @@
 import React from "react";
 import "../App.css";
 import SC from "../images/soundcloud.png";
-
 import { Button } from "antd";
+import { Typography } from "antd";
+
 
 import {
   GithubFilled,
@@ -13,11 +14,16 @@ import {
 } from "@ant-design/icons";
 
 export default function SocialLinks() {
+  const { Title } = Typography;
   return (
     <>
-      <div className="centered-text">
-        <p>View my socials!</p>
-      </div>
+      <Title
+          level={3}
+          className="component-header"
+          style={{ color: "white"}}
+        >
+          Socials
+        </Title>
       <div className="centered-text">
         <Button
           className="button"

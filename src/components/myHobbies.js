@@ -1,27 +1,25 @@
 import React from "react";
 import "../App.css";
 
-import { Button, Popover } from "antd";
+import { Typography } from "antd";
 
 export default function MyHobbies() {
+  const { Title } = Typography;
   return (
-    <div className="flex-item">
-      <Popover
-        content={
-          <div>
-            <p>
-              - Coding (DUH!) 👨‍💻<br></br>- Piano Covers 🎹<br></br>- Soccer ⚽
-              <br></br>- Anime Art 🎨<br></br>- Gaming 🎮<br></br>
-            </p>
-          </div>
-        }
-        title="My Hobbies"
-        placement="bottom"
-      >
-        <Button type="primary" style={{ border: "1px solid black" }}>
+    <div >
+      <Title
+          level={3}
+          className="component-header"
+          style={{ color: "white"}}
+        >
           My Hobbies
-        </Button>
-      </Popover>
+        </Title>
+        <div class="centered-text">
+          <p>
+            - Coding (DUH!) 👨‍💻<br></br>- Piano Covers 🎹<br></br>- Soccer ⚽
+            <br></br>- Anime Art 🎨<br></br>- Gaming 🎮<br></br>
+          </p>
+        </div>
     </div>
   );
 }

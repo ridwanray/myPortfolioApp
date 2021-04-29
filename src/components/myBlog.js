@@ -51,7 +51,7 @@ export default function MyBlog() {
                   position="right"
                   color="black"
                 >
-                  {article.title}
+                  <p style={{ width: "100%"}}>{article.title}</p>
                 </Timeline.Item>
               );
             })

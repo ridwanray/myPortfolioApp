@@ -1,41 +1,36 @@
 import React, { useState } from "react";
 import "../App.css";
-
-import { Button, Popover } from "antd";
+import { Typography } from "antd";
 
 export default function TechIUse() {
-  const [btnPos, setbtnPos] = useState(false);
-  const toggleBtnPos = () => {
-    setbtnPos(!btnPos);
-  };
+  const { Title } = Typography;
   return (
     <div>
-      <Popover
-        content={
-          <div>
-            <p>
-              Favourite Editor: VSCode<br></br>
-              Languages: C, Python, JS, Java, PHP<br></br>
-              Dev Ops: AWS, Heroku<br></br>
-              Backend: Django, NodeJS<br></br>
-              Frontend: React, Vue, Angular<br></br>
-              RDBMS: PostgreSQL, MySQL<br></br>
-              <b>and learning a ton more...</b>
-            </p>
-          </div>
-        }
-        title="Technologies I Use"
-        placement="bottom"
-      >
-        <Button
-          onMouseEnter={() => toggleBtnPos()}
-          onMouseLeave={() => toggleBtnPos()}
-          type="primary"
-          style={{ border: "1px solid black" }}
+      <Title
+          level={3}
+          className="component-header"
+          style={{ color: "white", marginTop: 5 }}
         >
-          Tech I Use
-        </Button>
-      </Popover>
+          Technologies I Work With
+        </Title>
+        <div id="container">
+          <div id="stage">
+            <div id="shape" class="cube backfaces">
+              <div class="plane one"><i>Django</i></div>
+              <div class="plane two"><i>Javascript</i></div>
+              <div class="plane three"><i>Typescript</i></div>
+              <div class="plane four"><i>AWS</i></div>
+              <div class="plane five"><i>Python</i></div>
+              <div class="plane six"><i>React</i></div>
+              <div class="plane seven"><i>PHP</i></div>
+              <div class="plane eight"><i>PostgreSQL</i></div>
+              <div class="plane nine"><i>MySQL</i></div>
+              <div class="plane ten"><i>Heroku</i></div>
+              <div class="plane eleven"><i>NodeJS</i></div>
+              <div class="plane twelve"><i>Laravel</i></div>
+            </div>
+          </div>          
+        </div>
     </div>
   );
 }

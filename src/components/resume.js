@@ -25,7 +25,7 @@ export default function Resume() {
   };
 
   return (
-    <div className="space-between-components">
+    <div>
       <div className="centered-text">
         <Title
           level={3}

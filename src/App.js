@@ -48,26 +48,17 @@ function App() {
           <AnimateText userData={userData} />
         </div>
         <SocialLinks />
-        <div className="flex-container flex-center">
-          <AboutMe />
-          <MyHobbies />
-          <TechIUse />
-        </div>
-        <div className="flex-container flex-center">
-          <LeetCodeProgress />
-        </div>
-        <div className="flex-container flex-center">
-          <RecentProjects />
-        </div>
+        <AboutMe />
+        <TechIUse />
+        <RecentProjects />
         <div className="flex-container flex-center">
           <MyBlog />
         </div>
         <div className="flex-container flex-center">
           <GitHubRepos />
         </div>
-        <div className="flex-container flex-center">
-          <Resume />
-        </div>
+        <MyHobbies />
+        <Resume />
         <div className="flex-container flex-center">
           <ContactMe />
         </div>

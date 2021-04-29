@@ -93,7 +93,7 @@ export default function GitHubRepos() {
                   }
                 >
                   {repo.repo_desc}
-                  <div className="centered-text">
+                  <div>
                     <br></br>
                     <p>Written in: </p>
                     {repo.repo_lang ? (
