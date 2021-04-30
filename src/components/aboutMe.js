@@ -15,15 +15,14 @@ export default function AboutMe() {
         </Title>
         <div class="fade-in">
           <p class="centered-text">
-            Hey! I'm Farhan! I'm a highly-enthusiastic individual whose
-            currently pursuing a B.Sc in Computer Science at UNSW. I
-            am a full-stack software developer, working primarily with the
-            Django-React stack. At university, I was the designated technical 
-            lead for our capstone project. I enjoy working in both
-            team-oriented and self-directed environments and offer great
-            communication skills and work ethic. My work experience includes a 
-            summer internship at Macrovue, a FinTech company formerly based in 
-            Circular Quay (now located at Pitt Street)
+            Hey there! I'm Farhan! I am a full-stack software developer with a 
+            B.Sc in Computer Science from UNSW. Currently, I'm working primarily 
+            with the Django-React tech stack. At university, I was the designated 
+            technical lead for our final year capstone project. I enjoy working in 
+            both team-oriented and self-directed environments and offer great 
+            communication skills and work ethic. This portfolio provides an overview
+            of my projects and highlights my skillset. Feel free to get in touch
+            with me using the form below! Happy coding!
         </p>
       </div>
     </div>
