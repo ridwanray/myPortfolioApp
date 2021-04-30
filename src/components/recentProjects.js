@@ -39,7 +39,7 @@ export default function RecentProjects() {
 
   return (
     <>
-      <div className="custom-center">
+      <div className="centered-text">
         <Title
           level={3}
           className="component-header"

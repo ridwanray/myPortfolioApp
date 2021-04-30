@@ -19,7 +19,7 @@ export default function MyBlog() {
   }, []);
 
   return (
-    <div>
+    <div className="centered-text">
       <Title level={3} className="component-header" style={{ color: "white" }}>
         Blog
       </Title>

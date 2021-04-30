@@ -25,34 +25,32 @@ export default function Resume() {
   };
 
   return (
-    <div>
-      <div className="centered-text">
-        <Title
-          level={3}
-          className="component-header"
-          style={{ color: "white" }}
-        >
-          My Resume
-        </Title>
-        <Paragraph
-          style={{
-            color: "white",
-          }}
-          ellipsis={{
-            rows: 5,
-          }}
-        >
-          A resume does a much better job at showcasing one's skillset. Click
-          below to grab mine!
-        </Paragraph>
-        <Button
-          style={{ border: "1px solid black" }}
-          onClick={() => handleResumeDownload()}
-          type="primary"
-        >
-          Grab Resume!
-        </Button>
-      </div>
+    <div className="centered-text">
+      <Title
+        level={3}
+        className="component-header"
+        style={{ color: "white" }}
+      >
+        My Resume
+      </Title>
+      <Paragraph
+        style={{
+          color: "white",
+        }}
+        ellipsis={{
+          rows: 5,
+        }}
+      >
+        A resume does a much better job at showcasing one's skillset. Click
+        below to grab mine!
+      </Paragraph>
+      <Button
+        style={{ border: "1px solid black" }}
+        onClick={() => handleResumeDownload()}
+        type="primary"
+      >
+        Grab Resume!
+      </Button>
     </div>
   );
 }

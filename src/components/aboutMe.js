@@ -5,7 +5,7 @@ import { Typography } from "antd";
 export default function AboutMe() {
   const { Title } = Typography;
   return (
-    <div style={{ marginTop: 20}}>
+    <div className="centered-text">
       <Title
           level={3}
           className="component-header"

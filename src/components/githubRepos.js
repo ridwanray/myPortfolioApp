@@ -47,7 +47,7 @@ export default function GitHubRepos() {
   };
 
   return (
-    <div>
+    <div className="centered-text">
       <Title
         level={3}
         className="component-header"

@@ -17,13 +17,15 @@ export default function SocialLinks() {
   const { Title } = Typography;
   return (
     <>
+      <div className="centered-text">
       <Title
-          level={3}
-          className="component-header"
-          style={{ color: "white"}}
-        >
-          Socials
-        </Title>
+            level={3}
+            className="component-header"
+            style={{ color: "white"}}
+          >
+            Socials
+          </Title>
+      </div>
       <div className="centered-text">
         <Button
           className="button"

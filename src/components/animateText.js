@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../App.css";
-import axios from "axios";
 
 import { Typography } from "antd";
 
@@ -11,7 +10,7 @@ var ReactRotatingText = require("react-rotating-text");
 export default function AnimateText(props) {
   const { Title } = Typography;
   return (
-    <div>
+    <div className="centered-text">
       <Fade cascade>
         <Title
           level={3}

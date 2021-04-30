@@ -12,8 +12,9 @@ import RecentProjects from "./components/recentProjects";
 import Resume from "./components/resume";
 import ContactMe from "./components/contactMe";
 import GitHubRepos from "./components/githubRepos";
-import LeetCodeProgress from "./components/leetcodeProgress";
+// import LeetCodeProgress from "./components/leetcodeProgress";
 import MyBlog from "./components/myBlog";
+import ProfilePicture from './components/profilePicture';
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -30,36 +31,17 @@ function App() {
     <div>
       <Background />
       <div className="app-div">
-        <div className="flex-container flex-center">
-          {userData ? (
-            <img
-              alt="gitprofilpicture"
-              src={userData.profile_pic}
-              style={{
-                borderRadius: "50%",
-                marginBottom: 20,
-                width: 300,
-                height: 300,
-              }}
-            ></img>
-          ) : null}
-        </div>
-        <div className="flex-container flex-center">
+        <div className="flex-center">
+          <ProfilePicture userData={userData} />
           <AnimateText userData={userData} />
-        </div>
-        <SocialLinks />
-        <AboutMe />
-        <TechIUse />
-        <RecentProjects />
-        <div className="flex-container flex-center">
+          <SocialLinks />
+          <AboutMe />
+          <TechIUse />
+          <RecentProjects />
           <MyBlog />
-        </div>
-        <div className="flex-container flex-center">
           <GitHubRepos />
-        </div>
-        <MyHobbies />
-        <Resume />
-        <div className="flex-container flex-center">
+          <MyHobbies />
+          <Resume />
           <ContactMe />
         </div>
       </div>

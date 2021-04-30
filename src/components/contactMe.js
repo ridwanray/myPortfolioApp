@@ -51,7 +51,7 @@ export default function ContactMe() {
   };
 
   return (
-    <div>
+    <div className="centered-text">
       <Title level={3} className="component-header" style={{ color: "white" }}>
         Wanna get in touch?
       </Title>

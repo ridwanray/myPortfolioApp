@@ -6,7 +6,7 @@ import { Typography } from "antd";
 export default function MyHobbies() {
   const { Title } = Typography;
   return (
-    <div >
+    <div className="centered-text">
       <Title
           level={3}
           className="component-header"
@@ -14,7 +14,7 @@ export default function MyHobbies() {
         >
           My Hobbies
         </Title>
-        <div class="centered-text">
+        <div className="centered-text">
           <p>
             - Coding (DUH!) 👨‍💻<br></br>- Piano Covers 🎹<br></br>- Soccer ⚽
             <br></br>- Anime Art 🎨<br></br>- Gaming 🎮<br></br>

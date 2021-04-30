@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 import { Typography } from "antd";
 
 export default function TechIUse() {
   const { Title } = Typography;
   return (
-    <div>
+    <div className="centered-text">
       <Title
           level={3}
           className="component-header"
