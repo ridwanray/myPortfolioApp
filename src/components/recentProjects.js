@@ -73,7 +73,6 @@ export default function RecentProjects() {
                       <img
                         alt="logo"
                         src={project.logo}
-                        style={{ padding: 20 }}
                         width={project.img_width}
                         height={project.img_height}
                       ></img>
