@@ -13,21 +13,25 @@ export default function Background() {
   };
   return (
     <div>
-      <Switch
-        className="rightSwitch"
-        unCheckedChildren="Try Me!"
-        checkedChildren="Try Me!"
-        onClick={() => handleBackgroundChange()}
-      />
-      <Particles
-        className={toggleBackground ? "custom-bubbles" : "custom-particles"}
-        params={{
-          particles: toggleBackground
-            ? Backgrounds.Bubbles
-            : Backgrounds.Particles,
-          interactivity: Backgrounds.Interactivity,
-        }}
-      />
+      <div>
+        <Particles
+          className={toggleBackground ? "custom-bubbles" : "custom-particles"}
+          params={{
+            particles: toggleBackground
+              ? Backgrounds.Bubbles
+              : Backgrounds.Particles,
+            interactivity: Backgrounds.Interactivity,
+          }}
+        />
+        <div class="centered-text">
+            <Switch
+              className="switch"
+              unCheckedChildren="Try Me!"
+              checkedChildren="Try Me!"
+              onClick={() => handleBackgroundChange()}
+            />
+        </div>
+      </div>
     </div>
   );
 }
