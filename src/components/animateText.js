@@ -28,7 +28,7 @@ export default function AnimateText(props) {
                 "Hey there! 😊",
                 "I'm Farhan! ",
                 "I love writing code to solve problems! 🛠️ ",
-                `I'm currently based in ${props.userData.location} 🇦🇺`,
+                `I'm currently based in ${props.userData.location.slice(0,7)} 🇦🇺`,
                 "This is my personal portfolio 📜",
                 `It's still a work in progress! 👨‍💻`,
                 `You can learn a little bit more about me below 🧐!`,
