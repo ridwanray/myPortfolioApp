@@ -25,18 +25,10 @@ export default function Resume() {
   };
 
   return (
-    <div className="centered-text">
-      <Title
-        level={3}
-        className="component-header"
-        style={{ color: "white" }}
-      >
-        My Resume
-      </Title>
+    <div>
+      <Title level={3} className="section-title">My Resume</Title>
       <Paragraph
-        style={{
-          color: "white",
-        }}
+        className="paragraph-color"
         ellipsis={{
           rows: 5,
         }}
@@ -45,7 +37,7 @@ export default function Resume() {
         below to grab mine!
       </Paragraph>
       <Button
-        style={{ border: "1px solid black" }}
+        className="btn"
         onClick={() => handleResumeDownload()}
         type="primary"
       >

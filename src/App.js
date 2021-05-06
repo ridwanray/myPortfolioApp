@@ -28,24 +28,42 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Background />
-      <div className="app-div">
-        <div className="flex-center">
+      <div className="container">
+        <Background />
+        <section id="profile-picture" className="section">
           <ProfilePicture userData={userData} />
+        </section>
+        <section id="animated-text" className="section">
           <AnimateText userData={userData} />
+        </section>
+        <section id="social-links" className="section">
           <SocialLinks />
+        </section>
+        <section id="about-me" className="section">
           <AboutMe />
+        </section>
+        <section id="tech" className="section">
           <TechIUse />
+        </section>
+        <section id="recent-projects" className="section">
           <RecentProjects />
+        </section>
+        <section id="blog" className="section">
           <MyBlog />
+        </section>
+        <section id="github" className="section">
           <GitHubRepos />
+        </section>
+        <section id="hobbies" className="section">
           <MyHobbies />
+        </section>
+        <section id="resume" className="section">
           <Resume />
+        </section>
+        <section id="contact" className="section">
           <ContactMe />
-        </div>
+        </section>
       </div>
-    </div>
   );
 }
 

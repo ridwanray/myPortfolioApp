@@ -19,44 +19,43 @@ export default function MyBlog() {
   }, []);
 
   return (
-    <div className="centered-text">
-      <Title level={3} className="component-header" style={{ color: "white" }}>
+    <div>
+      <Title level={3} className="section-title">
         Blog
       </Title>
-      <Paragraph
-        className="centered-text"
-        style={{
-          color: "white",
-        }}
+      <Paragraph 
+        className="section-title"
         ellipsis={{
           rows: 5,
         }}
       >
         I also write about technology from time to time...
       </Paragraph>
-      <Timeline style={{ color: "white" }}>
-        {articles
-          ? articles.map((article) => {
-              return (
-                <Timeline.Item
-                  label={
-                    <a
-                      href={article.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Read More
-                    </a>
-                  }
-                  position="right"
-                  color="black"
-                >
-                  <p style={{ width: "100%"}}>{article.title}</p>
-                </Timeline.Item>
-              );
-            })
-          : null}
-      </Timeline>
+      <div>
+        <Timeline className="timeline-article">
+          {articles
+            ? articles.map((article) => {
+                return (
+                  <Timeline.Item
+                    label={
+                      <a
+                        href={article.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Read More
+                      </a>
+                    }
+                    position="right"
+                    color="black"
+                  >
+                    <p>{article.title}</p>
+                  </Timeline.Item>
+                );
+              })
+            : null}
+        </Timeline>
+      </div>
     </div>
   );
 }

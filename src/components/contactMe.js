@@ -51,12 +51,13 @@ export default function ContactMe() {
   };
 
   return (
-    <div className="centered-text">
-      <Title level={3} className="component-header" style={{ color: "white" }}>
+    <div>
+      <Title level={3} className="section-title">
         Wanna get in touch?
       </Title>
-      <Form className="flex-center" form={form} onFinish={onFinish}>
+      <Form form={form} onFinish={onFinish}>
         <Form.Item
+          className="form-item"
           name="email"
           rules={[
             {
@@ -66,19 +67,13 @@ export default function ContactMe() {
           ]}
         >
           <Input
-            style={{
-              border: "1px solid black",
-              textAlign: "center",
-            }}
+            className="form-input"
             placeholder="Drop your email here!"
           ></Input>
         </Form.Item>
-        <Form.Item className="centered-text">
+        <Form.Item>
           <Button
-            style={{
-              border: "1px solid black",
-              textAlign: "center",
-            }}
+            className="btn"
             type="primary"
             htmlType="submit"
           >

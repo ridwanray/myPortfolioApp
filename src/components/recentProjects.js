@@ -39,20 +39,13 @@ export default function RecentProjects() {
 
   return (
     <>
-      <div className="centered-text">
-        <Title
-          level={3}
-          className="component-header"
-          style={{ color: "white" }}
-        >
-          Freelance Projects
-        </Title>
+      <div>
+        <Title level={3} className="section-title">Freelance Projects</Title>
         <Carousel
           autoplay
           effect="fade"
           dotPosition="top"
           dots={false}
-          className="custom-center"
         >
           {<Spin /> ? (
             projects.map((project) => {
@@ -81,18 +74,11 @@ export default function RecentProjects() {
                     headStyle={{
                       background: "black",
                       color: "white",
-                      width: 400,
                       borderTopLeftRadius: 10,
                       borderTopRightRadius: 10,
                       border: "none",
                     }}
-                    style={{
-                      width: 400,
-                      borderRadius: 10,
-                      color: "white",
-                      background:
-                        "linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)",
-                    }}
+                    className="card-style"
                   >
                     {project.desc}
                   </Card>

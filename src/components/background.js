@@ -23,7 +23,7 @@ export default function Background() {
             interactivity: Backgrounds.Interactivity,
           }}
         />
-        <div class="centered-text">
+        <div>
             <Switch
               className="switch"
               unCheckedChildren="Try Me!"

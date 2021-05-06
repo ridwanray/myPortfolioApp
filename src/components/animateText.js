@@ -10,7 +10,7 @@ var ReactRotatingText = require("react-rotating-text");
 export default function AnimateText(props) {
   const { Title } = Typography;
   return (
-    <div className="centered-text">
+    <div>
       <Fade cascade>
         <Title
           level={3}

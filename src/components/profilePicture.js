@@ -3,7 +3,7 @@ import "../App.css";
 
 export default function ProfilePicture(props) {
   return (
-    <div className="centered-text">
+    <div>
       {props.userData ? (
         <img
         alt="gitprofilpicture"
