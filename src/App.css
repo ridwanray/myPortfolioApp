@@ -76,13 +76,37 @@
   text-align: center;
 }
 
-#recent-projects .card-style {
-  margin: auto;
-  text-align: center;
-  width: 400px;
-  border-radius: 10px;
-  color: white;
-  background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%);
+@media(min-width: 1200px) {
+  #recent-projects .card-style {
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%);
+  }
+}
+
+@media(min-width: 501px) and (max-width: 1200px) {
+  #recent-projects .card-style {
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%);
+  }
+}
+
+@media(max-width: 500px) {
+  #recent-projects .card-style {
+    margin: auto;
+    text-align: center;
+    width: 350px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%);
+  }
 }
 
 #blog .timeline-article {
@@ -91,39 +115,116 @@
   margin: auto;
 }
 
-#github .github-card-header-style {
-  color: white;
-  background: black;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border: none;
+@media(min-width: 1200px) {
+  #github .github-card-header-style {
+    color: white;
+    background: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+  }
+  #github .github-card-style {
+    margin: auto;
+    height: 380px;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)
+  }
+  #github .github-card-logo {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+  }
 }
 
-#github .github-card-style {
-  margin: auto;
-  height: 380px;
-  width: 400px;
-  border-radius: 10px;
-  color: white;
-  background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)
+@media(min-width: 501px) and (max-width: 1200px) {
+  #github .github-card-header-style {
+    color: white;
+    background: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+  }
+  #github .github-card-style {
+    margin: auto;
+    height: 380px;
+    width: 400px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)
+  }
+  #github .github-card-logo {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+  }
 }
 
-#github .github-card-logo {
-  width: 64px;
-  height: 64px;
-  display: inline-block;
+@media(max-width: 500px) {
+  #github .github-card-header-style {
+    color: white;
+    background: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+  }
+  #github .github-card-style {
+    margin: auto;
+    height: 380px;
+    width: 350px;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)
+  }
+  #github .github-card-logo {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+  }
 }
 
 #hobbies .hobbies-list {
   color: white;
 }
 
-#contact .form-item {
-  margin: auto;
-  margin-bottom: 20px;
-  width: 400px;
-  border: 1px solid black;
-  text-align: center;
+@media(min-width: 1200px) {
+  #contact .form-item {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 400px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  #contact .form-input {
+    text-align: center;
+  }
+}
+
+@media(min-width: 501px) and (max-width: 1200px) {
+  #contact .form-item {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 400px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  #contact .form-input {
+    text-align: center;
+  }
+}
+
+@media(max-width: 500px) {
+  #contact .form-item {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 340px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  #contact .form-input {
+    text-align: center;
+  }
 }
 
 #contact .form-input {

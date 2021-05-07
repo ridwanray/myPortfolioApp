@@ -14,7 +14,7 @@ import ContactMe from "./components/contactMe";
 import GitHubRepos from "./components/githubRepos";
 // import LeetCodeProgress from "./components/leetcodeProgress";
 import MyBlog from "./components/myBlog";
-import ProfilePicture from './components/profilePicture';
+import ProfilePicture from "./components/profilePicture";
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -22,48 +22,48 @@ function App() {
   useEffect(() => {
     axios
       .get("https://farhansportfolioapp.herokuapp.com/gituser/")
-      .then((res) => {
+      .then(res => {
         setUserData(res.data);
       });
   }, []);
 
   return (
-      <div className="container">
-        <Background />
-        <section id="profile-picture" className="section">
-          <ProfilePicture userData={userData} />
-        </section>
-        <section id="animated-text" className="section">
-          <AnimateText userData={userData} />
-        </section>
-        <section id="social-links" className="section">
-          <SocialLinks />
-        </section>
-        <section id="about-me" className="section">
-          <AboutMe />
-        </section>
-        <section id="tech" className="section">
-          <TechIUse />
-        </section>
-        <section id="recent-projects" className="section">
-          <RecentProjects />
-        </section>
-        <section id="blog" className="section">
-          <MyBlog />
-        </section>
-        <section id="github" className="section">
-          <GitHubRepos />
-        </section>
-        <section id="hobbies" className="section">
-          <MyHobbies />
-        </section>
-        <section id="resume" className="section">
-          <Resume />
-        </section>
-        <section id="contact" className="section">
-          <ContactMe />
-        </section>
-      </div>
+    <div className="container">
+      <Background />
+      <section id="profile-picture" className="section">
+        <ProfilePicture userData={userData} />
+      </section>
+      <section id="animated-text" className="section">
+        <AnimateText userData={userData} />
+      </section>
+      <section id="social-links" className="section">
+        <SocialLinks />
+      </section>
+      <section id="about-me" className="section">
+        <AboutMe />
+      </section>
+      <section id="tech" className="section">
+        <TechIUse />
+      </section>
+      <section id="recent-projects" className="section">
+        <RecentProjects />
+      </section>
+      <section id="blog" className="section">
+        <MyBlog />
+      </section>
+      <section id="github" className="section">
+        <GitHubRepos />
+      </section>
+      <section id="hobbies" className="section">
+        <MyHobbies />
+      </section>
+      <section id="resume" className="section">
+        <Resume />
+      </section>
+      <section id="contact" className="section">
+        <ContactMe />
+      </section>
+    </div>
   );
 }
 
