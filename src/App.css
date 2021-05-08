@@ -102,7 +102,7 @@
   #recent-projects .card-style {
     margin: auto;
     text-align: center;
-    width: 350px;
+    width: 340px;
     border-radius: 10px;
     color: white;
     background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%);
@@ -172,7 +172,7 @@
   #github .github-card-style {
     margin: auto;
     height: 380px;
-    width: 350px;
+    width: 340px;
     border-radius: 10px;
     color: white;
     background: linear-gradient(180deg, rgba(31, 31, 31, 0.33) 0%, rgba(31, 31, 31, 0.41) 75%, #1F1F1F 100%)
@@ -281,7 +281,7 @@
 
 @keyframes spin {
   from { -webkit-transform: rotateX(180deg); }
-  to   { -webkit-transform: rotateY(60deg); }
+  to   { -webkit-transform: rotateY(90deg); }
 }
 
 /* ---------- cube styles ------------- */
@@ -339,169 +339,6 @@
 .cube > .twelve {
   -webkit-transform: scale3d(0.8, 0.8, 0.8) rotateX(-90deg) translateZ(100px);
 }
-
-/* ---------- ring styles ------------- */
-.ring > .one {
-  -webkit-transform: translateZ(380px);
-}
-
-.ring > .two {
-  -webkit-transform: rotateY(30deg) translateZ(380px);
-}
-
-.ring > .three {
-  -webkit-transform: rotateY(60deg) translateZ(380px);
-}
-
-.ring > .four {
-  -webkit-transform: rotateY(90deg) translateZ(380px);
-}
-
-.ring > .five {
-  -webkit-transform: rotateY(120deg) translateZ(380px);
-}
-
-.ring > .six {
-  -webkit-transform: rotateY(150deg) translateZ(380px);
-}
-
-.ring > .seven {
-  -webkit-transform: rotateY(180deg) translateZ(380px);
-}
-
-.ring > .eight {
-  -webkit-transform: rotateY(210deg) translateZ(380px);
-}
-
-.ring > .nine {
-  -webkit-transform: rotateY(-120deg) translateZ(380px);
-}
-
-.ring > .ten {
-  -webkit-transform: rotateY(-90deg) translateZ(380px);
-}
-
-.ring > .eleven {
-  -webkit-transform: rotateY(300deg) translateZ(380px);
-}
-
-.ring > .twelve {
-  -webkit-transform: rotateY(330deg) translateZ(380px);
-}
-
-.controls {
-  width: 80%;
-  margin: 0 auto;
-  padding: 5px 20px;
-  -webkit-border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.controls > div {
-  margin: 10px;
-}
-
-/* .custom-center {
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20em;
-}
-
-.app-div {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 200px;
-}
-
-.button-border {
-  border: 1px solid black;
-}
-
-.fadeTitle {
-  float: top-left;
-  color: white;
-  font-size: 50px;
-  text-align: center;
-  font-family: DoHyeon;
-}
-
-.switch {
-  font-weight: bold;
-  color: white;
-}
-
-.centered-text {
-  color: #ffffff;
-  text-align: center;
-  width: 450px;
-  padding: 10px;
-}
-
-.centered-button {
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-  top: 110px;
-  border-width: 1px;
-  border-color: black;
-  z-index: 1;
-}
-
-.centered-button-drop {
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-  top: 290px;
-  border-width: 1px;
-  border-color: black;
-  z-index: 1;
-} */
-
-/* .flex-container {
-  padding: 0px;
-  margin: 20px;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-center {
-  justify-content: center;
-  flex-direction: row;
-}
-
-.flex-col {
-  justify-content: center;
-  flex-direction: column;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  width: 25%;
-  box-sizing: border-box;
-}
-
-.flex-item {
-  margin-right: 10px;
-}
-
-.space-between-components {
-  padding-top: 20px;
-  padding-right: 30px;
-}
-
-.component-header {
-  color: #ffffff;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.button {
-  margin: auto;
-  position: "relative";
-  margin-left: 10px;
-} */
-
 
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
